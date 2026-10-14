@@ -5,6 +5,7 @@ category: "Política"
 pubDate: 2026-10-05
 author: "Lucas Sena"
 coverStyle: "dark"
+cover: "capas/ninguem-pede-voto.png"
 ---
 
 Passei as últimas semanas coordenando, aqui em Pompeia, a campanha dos deputados parceiros do Prefeito. Foram dias de reunião, de conversa no comércio, de porta em porta, de ouvir gente que normalmente ninguém ouve.
