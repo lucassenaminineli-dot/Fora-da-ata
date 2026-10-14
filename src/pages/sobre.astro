@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const tags = ['Política', 'Direito', 'Futebol', 'Atualidades', 'Opinião'];
+---
+
+<BaseLayout title="Sobre — Fora da Ata" description="Quem escreve o Fora da Ata: Lucas Sena.">
+  <section class="hero small">
+    <div class="wrap about">
+      <div class="avatar">LS</div>
+      <div>
+        <div class="eyebrow">Quem escreve</div>
+        <h1>Lucas Sena</h1>
+        <p>
+          Por trás do Fora da Ata existe uma pergunta simples: mas o que isso significa? Formado
+          em Direito, com atuação na gestão pública, Lucas analisa política, direito, futebol e
+          atualidades com um olhar que vai além da manchete — juntando fato, contexto e leitura
+          própria.
+        </p>
+        <p>
+          A proposta não é competir com portais de notícia, mas oferecer uma interpretação
+          autoral sobre o que realmente move a conversa pública.
+        </p>
+        <div class="tags">
+          {tags.map((t) => <span>{t}</span>)}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

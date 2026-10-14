@@ -1,0 +1,31 @@
+---
+interface Props {
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  coverStyle?: 'petrol' | 'dark' | 'pale';
+  pubDate: Date;
+}
+
+const { slug, title, excerpt, category, coverStyle = 'petrol', pubDate } = Astro.props;
+
+const formattedDate = new Intl.DateTimeFormat('pt-BR', {
+  day: '2-digit',
+  month: 'short',
+  year: 'numeric',
+}).format(pubDate);
+---
+
+<article class="card">
+  <a href={`/blog/${slug}/`}>
+    <div class={`cover ${coverStyle === 'petrol' ? '' : coverStyle}`}>
+      <span class="tag">{category}</span>
+    </div>
+    <div class="body">
+      <h3>{title}</h3>
+      <p class="excerpt">{excerpt}</p>
+      <div class="meta">Fora da Ata · {formattedDate}</div>
+    </div>
+  </a>
+</article>

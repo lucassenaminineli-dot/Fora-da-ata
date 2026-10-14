@@ -1,0 +1,30 @@
+---
+interface Props {
+  heading?: string;
+  subheading?: string;
+}
+
+const {
+  heading = 'Nem tudo cabe na manchete.',
+  subheading = 'Receba a leitura Fora da Ata direto no seu e-mail, antes de todo mundo.',
+} = Astro.props;
+---
+
+<section class="newsletter" id="assine">
+  <div class="wrap">
+    <h2>{heading}</h2>
+    <p>{subheading}</p>
+    <!--
+      Este site é 100% estático (sem servidor próprio), então este formulário
+      ainda não envia e-mails de verdade. Para ativá-lo de graça:
+      1. Crie uma conta em buttondown.com, mailerlite.com ou convertkit.com (planos free)
+      2. Copie a "action URL" do formulário de inscrição deles
+      3. Cole no atributo action do <form> abaixo
+    -->
+    <form class="form-row" action="#" method="post">
+      <input type="email" name="email" placeholder="seu@email.com" required />
+      <button class="btn" type="submit">Quero assinar</button>
+    </form>
+    <div class="form-note">Sem spam. Uma análise por vez.</div>
+  </div>
+</section>

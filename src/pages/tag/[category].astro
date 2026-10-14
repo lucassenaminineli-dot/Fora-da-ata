@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CategoryStrip from '../../components/CategoryStrip.astro';
+import PostCard from '../../components/PostCard.astro';
+import { CATEGORIES, categoryForSlug } from '../../utils/categories';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return CATEGORIES.map((c) => ({
+    params: { category: c.slug },
+    props: {
+      posts: posts
+        .filter((p) => p.data.category === c.name)
+        .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()),
+    },
+  }));
+}
+
+const { category } = Astro.params;
+const { posts } = Astro.props;
+const categoryName = categoryForSlug(category as string);
+---
+
+<BaseLayout title={`${categoryName} — Fora da Ata`} description={`Artigos de ${categoryName} no Fora da Ata.`}>
+  <section class="hero small">
+    <div class="wrap">
+      <div class="eyebrow">Editoria</div>
+      <h1 style="font-size:clamp(36px,6vw,64px)">{categoryName}</h1>
+    </div>
+  </section>
+
+  <CategoryStrip activeSlug={category as string} />
+
+  <section>
+    <div class="wrap">
+      <div class="grid">
+        {posts.map((post: any) => (
+          <PostCard
+            slug={post.id}
+            title={post.data.title}
+            excerpt={post.data.excerpt}
+            category={post.data.category}
+            coverStyle={post.data.coverStyle}
+            pubDate={post.data.pubDate}
+          />
+        ))}
+      </div>
+      {posts.length === 0 && (
+        <p style="color:var(--text-soft)">Ainda não há artigos publicados nessa editoria.</p>
+      )}
+    </div>
+  </section>
+</BaseLayout>

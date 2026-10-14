@@ -1,0 +1,37 @@
+---
+import { CATEGORIES } from '../utils/categories';
+---
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="/"><span class="fa-mark"></span>FORA DA ATA</a>
+    <nav class="links">
+      {CATEGORIES.map((c) => <a href={`/tag/${c.slug}/`}>{c.name}</a>)}
+      <a href="/sobre/">Sobre</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn" href="/#assine">Assine</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const links = document.querySelector('nav.links');
+  if (toggle && links) {
+    toggle.addEventListener('click', () => {
+      const open = (links as HTMLElement).style.display === 'flex';
+      const el = links as HTMLElement;
+      el.style.display = open ? 'none' : 'flex';
+      el.style.flexDirection = 'column';
+      el.style.position = 'absolute';
+      el.style.top = '64px';
+      el.style.left = '0';
+      el.style.right = '0';
+      el.style.background = 'var(--bg)';
+      el.style.padding = '16px 28px';
+      el.style.borderBottom = '1px solid var(--border)';
+    });
+  }
+</script>

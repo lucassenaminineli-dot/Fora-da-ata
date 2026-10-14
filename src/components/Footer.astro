@@ -1,0 +1,14 @@
+---
+import { CATEGORIES } from '../utils/categories';
+---
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <div class="footer-logo"><span class="fa-mark" style="width:14px;height:16px;"></span>FORA DA ATA</div>
+    <div class="footer-links">
+      {CATEGORIES.map((c) => <a href={`/tag/${c.slug}/`}>{c.name}</a>)}
+      <a href="/sobre/">Sobre</a>
+    </div>
+    <div class="tagline-foot">Mais que notícias. Outras perspectivas.</div>
+  </div>
+</footer>

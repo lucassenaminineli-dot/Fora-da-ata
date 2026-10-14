@@ -1,0 +1,42 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Newsletter from '../../components/Newsletter.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const formattedDate = new Intl.DateTimeFormat('pt-BR', {
+  day: '2-digit',
+  month: 'long',
+  year: 'numeric',
+}).format(post.data.pubDate);
+---
+
+<BaseLayout title={`${post.data.title} — Fora da Ata`} description={post.data.excerpt}>
+  <article class="post">
+    <div class="wrap" style="max-width:760px; padding-top:60px;">
+      <div class="eyebrow">{post.data.category}</div>
+      <h1 class="post-title">{post.data.title}</h1>
+      <div class="post-meta">{post.data.author} · {formattedDate}</div>
+
+      <div class="post-content">
+        <Content />
+      </div>
+
+      <div class="post-tags">
+        <span>{post.data.category}</span>
+      </div>
+    </div>
+  </article>
+
+  <Newsletter heading="Gostou dessa leitura?" subheading="Assine e receba as próximas análises do Fora da Ata direto no seu e-mail." />
+</BaseLayout>

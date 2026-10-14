@@ -1,0 +1,58 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CategoryStrip from '../components/CategoryStrip.astro';
+import PostCard from '../components/PostCard.astro';
+import InstagramShowcase from '../components/InstagramShowcase.astro';
+import Newsletter from '../components/Newsletter.astro';
+
+const allPosts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+const latest = allPosts.slice(0, 6);
+---
+
+<BaseLayout>
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <div class="eyebrow">Fatos • Contexto • Opinião</div>
+        <h1>FORA DA<span class="accent">ATA</span></h1>
+        <div class="sub">Mais que notícias · Outras perspectivas</div>
+      </div>
+      <div class="hero-quote">
+        "Entre o que é dito<br />e o que acontece,<br />existem outras histórias."
+      </div>
+    </div>
+  </section>
+
+  <CategoryStrip />
+
+  <section id="blog">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">O que ficou fora da manchete</div>
+          <h2>Últimas análises</h2>
+        </div>
+        <p>Toda publicação segue o mesmo método: o fato, o contexto, a leitura e a opinião.</p>
+      </div>
+      <div class="grid">
+        {latest.map((post) => (
+          <PostCard
+            slug={post.id}
+            title={post.data.title}
+            excerpt={post.data.excerpt}
+            category={post.data.category}
+            coverStyle={post.data.coverStyle}
+            pubDate={post.data.pubDate}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <InstagramShowcase />
+
+  <Newsletter />
+</BaseLayout>
