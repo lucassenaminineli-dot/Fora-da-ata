@@ -5,10 +5,16 @@ interface Props {
   excerpt: string;
   category: string;
   coverStyle?: 'petrol' | 'dark' | 'pale';
+  cover?: string;
   pubDate: Date;
 }
 
-const { slug, title, excerpt, category, coverStyle = 'petrol', pubDate } = Astro.props;
+const { slug, title, excerpt, category, coverStyle = 'petrol', cover, pubDate } = Astro.props;
+
+const coverClass = cover ? 'has-image' : coverStyle === 'petrol' ? '' : coverStyle;
+const coverInline = cover
+  ? `background-image:url(${cover});background-size:cover;background-position:center;aspect-ratio:1600/840;height:auto;`
+  : undefined;
 
 const formattedDate = new Intl.DateTimeFormat('pt-BR', {
   day: '2-digit',
@@ -19,7 +25,7 @@ const formattedDate = new Intl.DateTimeFormat('pt-BR', {
 
 <article class="card">
   <a href={`/blog/${slug}/`}>
-    <div class={`cover ${coverStyle === 'petrol' ? '' : coverStyle}`}>
+    <div class={`cover ${coverClass}`} style={coverInline}>
       <span class="tag">{category}</span>
     </div>
     <div class="body">
@@ -29,3 +35,11 @@ const formattedDate = new Intl.DateTimeFormat('pt-BR', {
     </div>
   </a>
 </article>
+
+<style>
+  /* sobre foto/arte, a etiqueta da editoria precisa de fundo mais forte para ler bem */
+  .cover.has-image .tag {
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+  }
+</style>
