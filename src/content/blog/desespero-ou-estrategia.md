@@ -5,6 +5,7 @@ category: "Política"
 pubDate: 2026-10-14
 author: "Lucas Sena"
 coverStyle: "petrol"
+cover: "/capas/desespero-ou-estrategia.png"
 ---
 
 A menos de duas semanas do segundo turno, dois movimentos chamaram atenção. Flávio Bolsonaro, que passou meses criticando a PEC do fim da escala 6x1, agora diz ser favorável a mais folga para o trabalhador. Lula, por sua vez, intensificou a agenda de medidas voltadas aos microempreendedores individuais.
