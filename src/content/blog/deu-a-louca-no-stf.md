@@ -4,6 +4,7 @@ excerpt: "Quando ministros do Supremo se enfrentam por decisões individuais, a 
 category: "Política"
 pubDate: 2026-10-14
 coverStyle: "dark"
+cover: "/capas/deu-a-louca-no-stf.png"
 ---
 
 *Este texto considera os fatos conhecidos até meados de setembro.*
