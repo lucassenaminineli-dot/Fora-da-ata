@@ -2,7 +2,7 @@
 title: "Deu a louca no STF"
 excerpt: "Quando ministros do Supremo se enfrentam por decisões individuais, a pergunta deixa de ser quem tem razão e passa a ser quem decide."
 category: "Política"
-pubDate: 2026-10-14
+pubDate: 2026-09-14
 coverStyle: "dark"
 cover: "/capas/deu-a-louca-no-stf.png"
 ---
