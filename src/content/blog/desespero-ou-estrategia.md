@@ -1,11 +1,10 @@
 ---
-layout: post
 title: "Desespero ou estratégia? O que a 6x1 e os MEIs revelam sobre o 2º turno"
-date: 2026-10-14 12:00:00 -0300
-author: Lucas Sena
-categories: [Política]
-tags: [eleições 2026, segundo turno, escala 6x1, MEI, Lula, Flávio Bolsonaro]
-description: "Flávio amacia o discurso sobre a 6x1, Lula mira os MEIs. Não é desespero: é leitura de pesquisa, cada um a partir da posição em que está no placar."
+excerpt: "Flávio amacia o discurso sobre a 6x1, Lula mira os MEIs. Não é desespero: é leitura de pesquisa, cada um a partir da posição em que está no placar."
+category: "Política"
+pubDate: 2026-10-14
+author: "Lucas Sena"
+coverStyle: "petrol"
 ---
 
 A menos de duas semanas do segundo turno, dois movimentos chamaram atenção. Flávio Bolsonaro, que passou meses criticando a PEC do fim da escala 6x1, agora diz ser favorável a mais folga para o trabalhador. Lula, por sua vez, intensificou a agenda de medidas voltadas aos microempreendedores individuais.
