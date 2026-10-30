@@ -5,6 +5,7 @@ category: "Direito"
 pubDate: 2026-10-30
 author: "Lucas Sena Minineli"
 coverStyle: "petrol"
+cover: "/capas/pautado-de-dia-retirado-a-noite.png"
 ---
 
 ## O Fato
