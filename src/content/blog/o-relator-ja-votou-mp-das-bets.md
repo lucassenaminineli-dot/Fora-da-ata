@@ -5,7 +5,7 @@ category: "Direito"
 pubDate: 2026-11-04
 author: Lucas Sena Minineli
 coverStyle: "petrol"
-cover: "capas/o-relator-ja-votou-mp-das-bets.png"
+cover: "/capas/o-relator-ja-votou-mp-das-bets.png"
 ---
 
 ## O Fato
