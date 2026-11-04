@@ -3,6 +3,7 @@ title: "O relator já votou. A audiência foi para os outros dez"
 excerpt: "Fux ouviu clubes e governo sobre a MP que proibiu as bets, mas sua posição está no plenário desde agosto. O que ainda está em disputa é a transição que a medida não deu."
 category: "Direito"
 pubDate: 2026-11-04
+author: Lucas Sena Minineli
 coverStyle: "petrol"
 cover: "capas/o-relator-ja-votou-mp-das-bets.png"
 ---
