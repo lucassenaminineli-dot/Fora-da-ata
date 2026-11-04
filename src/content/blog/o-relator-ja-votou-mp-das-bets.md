@@ -4,7 +4,7 @@ excerpt: "Fux ouviu clubes e governo sobre a MP que proibiu as bets, mas sua pos
 category: "Direito"
 pubDate: 2026-11-04
 coverStyle: "petrol"
-cover: "/capas/o-relator-ja-votou-mp-das-bets.png"
+cover: "o-relator-ja-votou-mp-das-bets.png"
 ---
 
 ## O Fato
