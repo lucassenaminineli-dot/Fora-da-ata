@@ -3,7 +3,7 @@ title: "Desespero ou estratégia? O que a 6x1 e os MEIs revelam sobre o 2º turn
 excerpt: "Flávio amacia o discurso sobre a 6x1, Lula mira os MEIs. Não é desespero: é leitura de pesquisa, cada um a partir da posição em que está no placar."
 category: "Política"
 pubDate: 2026-10-13
-author: "Lucas Sena"
+author: "Lucas Sena Minineli"
 coverStyle: "petrol"
 cover: "/capas/desespero-ou-estrategia.png"
 ---
