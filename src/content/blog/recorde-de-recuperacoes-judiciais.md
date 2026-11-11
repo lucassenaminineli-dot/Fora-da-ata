@@ -3,6 +3,7 @@ title: "Recorde de recuperações judiciais: a lei não foi feita para quem est�
 excerpt: "O Brasil fechou setembro com 8.478 empresas em recuperação judicial. O perfil de quem pede mudou, a lei continua a mesma, e a conta fica com o pequeno credor."
 category: "Direito"
 pubDate: 2026-11-11
+author: "Lucas Sena Minineli"
 coverStyle: "dark"
 cover: "/capas/recuperacao-judicial.png"
 ---
